@@ -19,6 +19,7 @@ export default function Lesbarkeit(props: IAppProps) {
           <Section className="bx--offset-lg-3 bx--col-lg-13">
             <Column sm={2} md={4} lg={6}>
               <p>Text</p>
+              <Tile></Tile>
             </Column>
             <Column sm={2} md={2} lg={3}></Column>
             <Column sm={0} md={2} lg={3}></Column>
