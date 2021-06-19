@@ -5,7 +5,7 @@ import { Content } from "carbon-components-react/lib/components/UIShell";
 import Grid from "carbon-components-react/lib/components/Grid/Grid";
 import Row from "carbon-components-react/lib/components/Grid/Row";
 import Column from "carbon-components-react/lib/components/Grid/Column";
-import Tile from "carbon-components-react/lib/components/Tile/Tile";
+
 import Link from "carbon-components-react/lib/components/Link/Link";
 
 export interface IAppProps {}
@@ -15,30 +15,9 @@ export default function StoryContent(props: IAppProps) {
     <Content id="main-content">
       <Grid>
         <Row>
-          <Column sm={2} md={4} lg={6}>
-            <Tile>
-              Default tile
-              <br />
-              <br />
-              <Link href="https://www.carbondesignsystem.com">Link</Link>
-            </Tile>
-          </Column>
-          <Column sm={2} md={2} lg={3}>
-            <Tile>
-              Default tile
-              <br />
-              <br />
-              <Link href="https://www.carbondesignsystem.com">Link</Link>
-            </Tile>
-          </Column>
-          <Column sm={0} md={2} lg={3}>
-            <Tile>
-              Default tile
-              <br />
-              <br />
-              <Link href="https://www.carbondesignsystem.com">Link</Link>
-            </Tile>
-          </Column>
+          <Column sm={2} md={4} lg={6}></Column>
+          <Column sm={2} md={2} lg={3}></Column>
+          <Column sm={0} md={2} lg={3}></Column>
         </Row>
       </Grid>
       <div className="bx--grid">
