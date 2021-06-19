@@ -1229,7 +1229,7 @@
 
 "@carbon/icons-react@^10.33.0":
   version "10.33.0"
-  resolved "https://registry.npmjs.org/@carbon/icons-react/-/icons-react-10.33.0.tgz"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-10.33.0.tgz#ff3272bfb0d5b75cdf745696ccd8b699eaff8679"
   integrity sha512-VuAs9X2Ldnv5bSgBT1RqMTJWfKbVDFv/Xy9ICJLvbmzs8LG54YG4RHci4SFF9bpcUZ23+src535XLEDNOo/3Ng==
   dependencies:
     "@carbon/icon-helpers" "^10.18.0"
@@ -3382,6 +3382,11 @@ carbon-components@^10.37.0:
     flatpickr "4.6.1"
     lodash.debounce "^4.0.8"
     warning "^3.0.0"
+
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
 
 carbon@^0.5.0:
   version "0.5.0"
