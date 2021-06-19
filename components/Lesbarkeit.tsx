@@ -8,6 +8,7 @@ import Column from "carbon-components-react/lib/components/Grid/Column";
 import { Tile } from "carbon-components-react";
 import Link from "carbon-components-react/lib/components/Link/Link";
 import { Section } from "carbon-components-react/lib/components/Heading";
+import { TextInput } from "carbon-components-react";
 
 export interface IAppProps {}
 
@@ -16,14 +17,25 @@ export default function Lesbarkeit(props: IAppProps) {
     <Content id="main-content">
       <Grid>
         <Row>
-          <Section className="bx--offset-lg-3 bx--col-lg-13">
-            <Column sm={2} md={4} lg={6}>
+          <Column sm={2} md={4} lg={6}></Column>
+          <Column sm={2} md={2} lg={3}>
+            <TextInput
+              helperText="Optional helper text"
+              id="test2"
+              invalidText="A valid value is required"
+              labelText="Text input label"
+              placeholder="Placeholder text"
+              light
+            />
+            <Tile light>
               <p>Text</p>
-              <Tile></Tile>
-            </Column>
-            <Column sm={2} md={2} lg={3}></Column>
-            <Column sm={0} md={2} lg={3}></Column>
-          </Section>
+            </Tile>
+          </Column>
+          <Column sm={0} md={2} lg={3}>
+            <Tile light>
+              <p>Text</p>
+            </Tile>
+          </Column>
         </Row>
       </Grid>
     </Content>
