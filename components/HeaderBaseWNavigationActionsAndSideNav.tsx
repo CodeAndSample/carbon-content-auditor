@@ -18,6 +18,7 @@ import {
   SideNavMenu,
   SideNavMenuItem,
 } from "carbon-components-react/lib/components/UIShell";
+import Lesbarkeit from "./Lesbarkeit";
 
 export interface IAppProps {}
 
@@ -30,6 +31,7 @@ const StoryContent = () => {
             style={{
               margin: "30px 0 30px 0",
               fontSize: "20px",
+              fontWeight: "bold",
             }}
           >
             Purpose and function
@@ -151,57 +153,48 @@ export default function HeaderBaseWNavigationActionsAndSideNav(
               >
                 <SideNavItems>
                   <SideNavMenu renderIcon={Fade16} title="Category title">
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem
-                      aria-current="page"
-                      href="javascript:void(0)"
-                    >
+                    <SideNavMenuItem aria-current="page" href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
                   </SideNavMenu>
                   <SideNavMenu renderIcon={Fade16} title="Category title">
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem
-                      aria-current="page"
-                      href="javascript:void(0)"
-                    >
+                    <SideNavMenuItem aria-current="page" href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
                   </SideNavMenu>
                   <SideNavMenu renderIcon={Fade16} title="Category title">
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem
-                      aria-current="page"
-                      href="javascript:void(0)"
-                    >
+                    <SideNavMenuItem aria-current="page" href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
-                    <SideNavMenuItem href="javascript:void(0)">
+                    <SideNavMenuItem href="https://ibm.com">
                       Link
                     </SideNavMenuItem>
                   </SideNavMenu>
-                  <SideNavLink renderIcon={Fade16} href="javascript:void(0)">
+                  <SideNavLink renderIcon={Fade16} href="https://ibm.com">
                     Link
                   </SideNavLink>
-                  <SideNavLink renderIcon={Fade16} href="javascript:void(0)">
+                  <SideNavLink renderIcon={Fade16} href="https://ibm.com">
                     Link
                   </SideNavLink>
                 </SideNavItems>
               </SideNav>
             </Header>
-            <StoryContent />
+            <Lesbarkeit></Lesbarkeit>
           </>
         )}
       />
