@@ -15,11 +15,31 @@ import {
 import Link from "carbon-components-react/lib/components/Link/Link";
 import { Section } from "carbon-components-react/lib/components/Heading";
 import { TextInput } from "carbon-components-react";
-import { Add24 } from "@carbon/icons-react";
+import {
+  Add24,
+  Chemistry24,
+  Data_124,
+  Data_224,
+  Data_232,
+  StringInteger24,
+  StringText24,
+} from "@carbon/icons-react";
 
-export interface IAppProps {}
+export interface IAppProps {
+  flesch: number;
+  sentences: number;
+  words: number;
+  syllables: number;
+  characters: number;
+}
 
-export default function Ergebnis(props: IAppProps) {
+export default function Ergebnis({
+  flesch,
+  sentences,
+  words,
+  syllables,
+  characters,
+}: IAppProps) {
   return (
     <ExpandableTile
       tabIndex={0}
@@ -36,14 +56,61 @@ export default function Ergebnis(props: IAppProps) {
           <p>Der Flesch-Lesbarkeits-Index berechnet sich wie folgt:</p>
           <br />
           <ul>
-            <li style={{ display: "inline-flex", alignItems: "center" }}>
-              <Add24 aria-label="Add" className="my-custom-class" />
-              Sätze: 4
+            <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <Chemistry24 aria-label="Chemistry" className="my-custom-class" />
+              Score: {flesch}
             </li>
-            <li>Wörter: 34 </li>
-            <li>Silben:</li>
-            <li>Zeichen: </li>
+            <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <StringText24
+                aria-label="Sentences"
+                className="my-custom-class"
+              />
+              Sätze: {sentences}
+            </li>
+            <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <Data_224 aria-label="Data" className="my-custom-class" />
+              Wörter: {words}{" "}
+            </li>
+            <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <Data_124 aria-label="Data" className="my-custom-class" />
+              Silben: {syllables}
+            </li>
+            <li
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <StringInteger24 aria-label="Add" className="my-custom-class" />
+              Zeichen: {characters}
+            </li>
           </ul>
+          <br />
         </div>
       </TileAboveTheFoldContent>
       <TileBelowTheFoldContent>

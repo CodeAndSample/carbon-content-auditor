@@ -38,7 +38,14 @@ export default class Lesbarkeit extends React.Component<Props, State> {
     const fleschIndex = Math.round(
       180 - lexiconCount / sentenceCount - 58.5 * (syllableCount / lexiconCount)
     );
-    return [fleschIndex, sentenceCount, lexiconCount, syllableCount];
+    const characterCount = output.length;
+    return [
+      fleschIndex,
+      sentenceCount,
+      lexiconCount,
+      syllableCount,
+      characterCount,
+    ];
   };
 
   formatText = (textInput: string) => {
@@ -174,10 +181,13 @@ export default class Lesbarkeit extends React.Component<Props, State> {
               <Tile className="space" light></Tile>
             </Column>
             <Column sm={1} md={2} lg={3}>
-              <Tile>
-                <p>{this.outputFlesch(this.state.text)}</p>
-              </Tile>
-              <Ergebnis></Ergebnis>
+              <Ergebnis
+                flesch={this.calculateReadability(this.state.text)[0]}
+                sentences={this.calculateReadability(this.state.text)[1]}
+                words={this.calculateReadability(this.state.text)[2]}
+                syllables={this.calculateReadability(this.state.text)[3]}
+                characters={this.calculateReadability(this.state.text)[4]}
+              ></Ergebnis>
             </Column>
           </Row>
         </Grid>
