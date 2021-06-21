@@ -78,8 +78,12 @@ export default class Lesbarkeit extends React.Component<Props, State> {
       <Content id="main-content">
         <Grid>
           <Row>
-            <Column sm={3} md={6} lg={{ span: 6, offset: 3 }}>
+            <Column sm={3} md={6} lg={{ span: 7, offset: 2 }}>
               <h1>Lesbarkeitsindex</h1>
+            </Column>
+          </Row>
+          <Row>
+            <Column sm={3} md={6} lg={{ span: 6, offset: 2 }}>
               <h2
                 style={{
                   margin: "30px 0 30px 0",
@@ -100,46 +104,12 @@ export default class Lesbarkeit extends React.Component<Props, State> {
                 onChange={this.handleChange}
               />
 
-              <Button
+              {/* <Button
                 style={{ marginBottom: "2rem", marginTop: "2rem" }}
                 onClick={this.handleSubmit}
               >
                 Jetzt analysieren
-              </Button>
-
-              <Form>
-                <div style={{ marginBottom: "2rem" }}>
-                  <TextArea
-                    cols={50}
-                    helperText="Optional helper text here; if message is more than one line text should wrap (~100 character count maximum)"
-                    id="test5"
-                    invalidText="Invalid error message."
-                    labelText="Text area label"
-                    placeholder="Placeholder text"
-                    rows={4}
-                  />
-                </div>
-                <div style={{ marginBottom: "2rem" }}>
-                  <Select
-                    defaultValue="placeholder-item"
-                    id="select-1"
-                    invalidText="This is an invalid error message."
-                    labelText="Select"
-                  >
-                    <SelectItem text="Option 1" value="option-1" />
-                    <SelectItem text="Option 2" value="option-2" />
-                    <SelectItem text="Option 3" value="option-3" />
-                  </Select>
-                </div>
-                <Button
-                  kind="primary"
-                  tabIndex={0}
-                  type="submit"
-                  style={{ marginBottom: "2rem" }}
-                >
-                  Submit
-                </Button>
-              </Form>
+              </Button> */}
 
               <Button style={{ marginTop: "2rem" }}>Text analysieren</Button>
               <h2
@@ -155,15 +125,11 @@ export default class Lesbarkeit extends React.Component<Props, State> {
                 als Sätze ausgewertet. Beispielsweise zählt jeder Stichpunkt bei
                 einer Stichpunktliste als ein Satz.
               </p>
-              <h2
+              <p
                 style={{
-                  margin: "30px 0 30px 0",
-                  fontSize: "20px",
+                  marginTop: "1rem",
                 }}
               >
-                Überprüfen Sie Ihren Text
-              </h2>
-              <p>
                 Die meisten Leute sagen, wenn Sie Online-Inhalte schreiben,
                 sollten Sie Ihre Sätze auf 25 Wörter oder weniger beschränken.
                 Sogar die britische Regierung hat Richtlinien dazu, aber Studien
@@ -178,9 +144,8 @@ export default class Lesbarkeit extends React.Component<Props, State> {
                 Wörtern zu verwenden. Es gibt zahlreiche wissenschaftliche
                 Studien, die belegen, dass kürzer besser ist.
               </p>
-              <Tile className="space" light></Tile>
             </Column>
-            <Column sm={1} md={2} lg={3}>
+            <Column sm={1} md={2} lg={{ span: 3, offset: 1 }}>
               <Ergebnis
                 flesch={this.calculateReadability(this.state.text)[0]}
                 sentences={this.calculateReadability(this.state.text)[1]}
