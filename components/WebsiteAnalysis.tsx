@@ -10,7 +10,7 @@ import Link from "carbon-components-react/lib/components/Link/Link";
 
 export interface IAppProps {}
 
-export default function StoryContent(props: IAppProps) {
+export default function WebsiteAnalysis(props: IAppProps) {
   return (
     <Content id="main-content">
       <Grid>

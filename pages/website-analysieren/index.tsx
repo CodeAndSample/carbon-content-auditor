@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import Layout from "../components/Layout";
-import Lesbarkeit from "../components/Lesbarkeit/Lesbarkeit";
+import Layout from "../../components/Layout";
+import MultipleTexts from "../../components/MultipleTexts";
+import WebsiteAnalysis from "../../components/WebsiteAnalysis";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout linkActive={1}>
-        <Lesbarkeit></Lesbarkeit>
+      <Layout linkActive={3}>
+        <WebsiteAnalysis></WebsiteAnalysis>
       </Layout>
     </div>
   );

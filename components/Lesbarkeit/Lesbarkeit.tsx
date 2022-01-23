@@ -79,7 +79,13 @@ export default class Lesbarkeit extends React.Component<Props, State> {
         <Grid>
           <Row>
             <Column sm={3} md={6} lg={{ span: 7, offset: 2 }}>
-              <h1>Lesbarkeitsindex</h1>
+              <h1
+                style={{
+                  margin: "32px 0 0 0",
+                }}
+              >
+                Lesbarkeitsindex
+              </h1>
             </Column>
           </Row>
           <Row>
